@@ -215,7 +215,7 @@ export default {
     margin-bottom: 20px;
 }
 
-.block-content-container {
+.duo_A .block-content-container {
     position: relative;
     width: 100%;
     min-height: 1px;
