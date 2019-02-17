@@ -3,9 +3,7 @@
         <!-- wwManager:start -->
         <wwSectionEditMenu v-bind:sectionCtrl="sectionCtrl"></wwSectionEditMenu>
         <!-- wwManager:end -->
-
         <wwObject class="background" v-bind:ww-object="section.data.background" ww-category="background"></wwObject>
-
         <div class="container section-padding">
             <div class="row">
                 <div class="title-container">
@@ -17,22 +15,18 @@
                     </h2>
                 </div>
             </div>
-
             <div>
                 <div class="row block-container" :class="{'one-block': section.data.blocks.length === 1}" v-for="(block, index) in section.data.blocks" :key="block.uniqueId">
-
                         <div class="block-img-container block">
                             <!-- wwManager:start -->
                             <div v-show="editMode" class="edit-button-top-left" @click="remove(section.data.blocks, { index })">
                                 <i class="wwi wwi-delete" aria-hidden="true"></i>
                             </div>
                             <!-- wwManager:end -->
-                            
                             <div class="block-img">
                                 <wwObject  v-bind:ww-object="block.img"></wwObject>
                             </div>
                         </div>
-
                         <div class="block-content-container block">
                             <wwObject class="block-title" v-bind:ww-object="block.title"></wwObject>
                             <wwObject class="block-text" v-bind:ww-object="block.text"></wwObject>
@@ -42,9 +36,7 @@
                                 <wwObject class="button-wrapper" v-bind:ww-object="block.button"></wwObject>
                             </div>
                         </div>
-
                 </div>
-
                 <!-- wwManager:start -->
                 <div class="row block-add-btn-container" v-show="editMode">
                     <wwLayoutPlus @click="add(section.data.blocks, getNewBlock())"></wwLayoutPlus>
@@ -57,7 +49,7 @@
 
 <script>
 export default {
-    name: "duo_A",
+    name: "__COMPONENT_NAME__",
     props: {
         sectionCtrl: Object
     },
